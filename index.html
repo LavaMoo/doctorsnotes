@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Visit Prep Brief</title>
+<style>
+:root{--bg:#f5f8f7;--fg:#1c2b2d;--mut:#586a6d;--card:#fff;--bd:#d5dedb;--pri:#0d6664;--prifg:#fff;--sage:#e1ede8;--amb:#fff0cf;--ambfg:#6b4300;--red:#7d1616;--redbg:#fde7e7;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1819;--fg:#e6efee;--mut:#9db0b2;--card:#172325;--bd:#2c3d3f;--pri:#5cc4bd;--prifg:#062322;--sage:#1d3230;--amb:#3d2f0b;--ambfg:#ffd98a;--red:#ffb4b4;--redbg:#3a1616}}
+:root[data-theme="dark"]{--bg:#0f1819;--fg:#e6efee;--mut:#9db0b2;--card:#172325;--bd:#2c3d3f;--pri:#5cc4bd;--prifg:#062322;--sage:#1d3230;--amb:#3d2f0b;--ambfg:#ffd98a;--red:#ffb4b4;--redbg:#3a1616}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.app{display:flex;justify-content:space-between;max-width:720px;margin:0 auto;padding:14px 16px;font-size:15px}
+.app b{color:var(--pri)}
+main{max-width:720px;margin:0 auto;padding:0 16px 24px}
+h1,h2{line-height:1.2;margin:.4em 0}h2{font-size:1.45rem}
+label{display:block;margin:12px 0;font-weight:600;font-size:.95rem}
+input,select,textarea{display:block;width:100%;box-sizing:border-box;margin-top:4px;padding:10px;font:inherit;font-weight:400;color:var(--fg);background:var(--card);border:1px solid var(--bd);border-radius:8px}
+fieldset{border:1px solid var(--bd);border-radius:8px;margin:12px 0}
+.inl{display:inline-flex;gap:8px;align-items:center;margin:4px 16px 4px 0}.inl input{width:auto;margin:0}
+.mut{color:var(--mut);font-size:.9rem}
+.btn,.chip,.sm{font:inherit;cursor:pointer;border:1px solid var(--pri);background:var(--card);color:var(--pri);border-radius:8px;padding:10px 16px;min-height:44px}
+.btn.pri{background:var(--pri);color:var(--prifg)}.btn:disabled{opacity:.45;cursor:not-allowed}
+.chip{border-radius:20px;padding:6px 14px;min-height:40px;margin:0 8px 8px 0;background:var(--sage);border-color:transparent}
+.sm{padding:6px 12px;min-height:44px;min-width:44px}
+.nav{display:flex;gap:10px;justify-content:space-between;margin:20px 0}
+.card{background:var(--card);border:1px solid var(--bd);border-left:6px solid var(--bd);border-radius:10px;padding:12px;margin:12px 0}
+.card textarea{font-weight:600}
+.p-top{border-left-color:var(--pri)}.p-important{border-left-color:#c58a12}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.acts{display:flex;gap:8px;margin-top:8px}
+#bud{padding:10px 12px;border-radius:8px;background:var(--sage);font-size:.92rem}#bud.warn{background:var(--amb);color:var(--ambfg)}
+.urgent{background:var(--redbg);color:var(--red);border:2px solid var(--red);border-radius:8px;padding:12px;margin:12px 0;font-weight:600}
+.ov{position:fixed;inset:0;background:rgba(10,20,20,.6);display:flex;align-items:center;justify-content:center;padding:16px;z-index:5}
+.dlg{background:var(--card);border-radius:12px;max-width:440px;padding:24px}
+#toast{position:fixed;bottom:calc(16px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);z-index:6}
+#toast div{background:var(--fg);color:var(--bg);padding:10px 16px;border-radius:8px;display:flex;gap:12px;align-items:center}
+#toast button{background:none;border:0;color:inherit;text-decoration:underline;font:inherit;cursor:pointer;min-height:44px}
+.paper{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:20px;margin-top:10px}
+.paper h1{font-size:1.6rem;margin:0}.paper h3{margin:18px 0 6px;font-size:1.05rem;border-bottom:1px solid var(--bd);padding-bottom:4px}
+.paper li{margin:6px 0}.paper .m{display:block;color:var(--mut);font-size:.85rem}
+.tag{display:inline-block;background:var(--sage);border-radius:12px;padding:1px 10px;margin:2px 4px 2px 0;font-size:.85rem}
+.line{border-bottom:1px solid var(--bd);height:28px}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.bar h2{flex:1 1 100%}
+footer{max-width:720px;margin:0 auto;padding:12px 16px 32px;color:var(--mut);font-size:.82rem}
+:focus-visible{outline:3px solid var(--pri);outline-offset:2px}
+@media (max-width:480px){.row{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:no-preference){main{animation:f .25s}@keyframes f{from{opacity:0}}}
+@media print{.app,.noprint,#modal,#toast{display:none!important}body{background:#fff;color:#000}.paper{border:0;padding:0;background:#fff;color:#000}footer{display:none}.paper .m,.paper .mut{color:#333}}
+</style></head><body>
+<div class="app"><b>Visit Prep Brief</b><span id="stp"></span></div>
+<main id="app" aria-live="polite"></main>
+<footer>Concept prototype. Not medical advice. Do not enter real personal health information.</footer>
+<div id="modal"></div><div id="toast" aria-live="polite"></div>
+<script>
+const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const CATS={symptom:'Symptom',medication:'Medication',test_results:'Test results',question:'Question',change:'Change',admin:'Paperwork/forms',emotional:'Emotional wellbeing',other:'Other'};
+const PRI={top:'Top priority',important:'Important',later:'If time allows'};
+const TR={unknown:'Not sure',worse:'Getting worse',better:'Getting better',same:'About the same'};
+const DISC='Concept prototype. Not medical advice. Do not enter real personal health information.';
+const BANNER='<div class="urgent" role="alert">Some of what you wrote may need urgent attention. If you have chest pain, trouble breathing, stroke symptoms, or thoughts of harming yourself, call your local emergency number now rather than waiting for your appointment.</div>';
+const CHIPS={'New symptom':'A new symptom: ','Side effect':'A side effect I noticed: ','Medication refill':'I need a refill on ','Test results':'I want to ask about my test results: ','Question about my condition':'A question about my condition: ','Something that changed':'Something that changed lately: ','Paperwork or forms':'I need a form or paperwork for '};
+// ---- Tunable rules: first match wins, in this order ----
+const RULES=[['medication',/\b(pills?|medic\w*|meds?|doses?|refill|prescription|side effects?|tablet|injection)/i],
+['test_results',/\b(tests?|results?|labs?|blood ?work|scans?|x-?rays?|mri|biopsy|a1c|sugar|readings?)\b/i],
+['admin',/\b(forms?|paperwork|letter|referral|insurance|note for work|disability)\b/i],
+['emotional',/(anxious|anxiety|stress|\bsad\b|depress|worried|can'?t sleep|not sleeping|overwhelm|lonely)/i],
+['question',/\?|\b(should i|is it normal|can i|why)\b/i],
+['change',/\b(lately|recently|started|since|suddenly|new|changed)\b/i],
+['symptom',/(pain|ache|aching|hurt|swell|swollen|cough|fever|tired|fatigue|dizz|nausea|rash|headache|numb|short of breath|bleed)/i]];
+const RED=/chest pain|can'?t breathe|cannot breathe|trouble breathing|sudden.*short(ness)? of breath|short(ness)? of breath.*sudden|face droop|slurred speech|weakness on one side|worst headache|coughing blood|vomiting blood|suicid|want to die|kill myself|hurt myself|fainted|passed out|severe bleeding/i;
+const SELF=/suicid|want to die|kill myself|hurt myself/i;
+const TOPW=/worse|worsening|\bnew\b|severe|can'?t|unable|dizz|side effect/i;
+const DUR=/for (\d+|a few|several) (days?|weeks?|months?|years?)|since (last|this) \w+|\d+ (days?|weeks?|months?) ago/i;
+const LIM={15:4,20:5,30:7};
+const BLANK=()=>({step:1,ack:false,capped:false,basics:{visitType:'',date:'',forWhom:'me',name:'',conditions:[],medications:[],visitMinutes:15},rawText:'',concerns:[]});
+let S=BLANK(),uid=0,undo=null,tt;
+const SAMPLE={basics:{visitType:'Follow-up',date:'',forWhom:'other',name:'Mom',conditions:['Type 2 diabetes','High blood pressure'],medications:['Metformin 500mg twice daily','Lisinopril 10mg daily','New: amlodipine (started 2 weeks ago)'],visitMinutes:15},
+text:`She's been dizzy since starting the new blood pressure pill, mostly in the mornings.
+Her sugar readings have been all over the place lately, sometimes 200 after breakfast.
+Also she's not sleeping and seems anxious about everything.
+Need a refill on metformin.
+Is it normal for her feet to be swollen at the end of the day?
+Can we get the results from last month's blood work?
+Need a form filled out for her insurance.`};
+// ---- Parser: pure function, swappable for an LLM later ----
+const clean=p=>{p=p.replace(/^[\s\-*•]*(\d+[.)]\s+)?/,'').replace(/\b(um|uh|you know)\b,?\s*/gi,'').replace(/([!?.,])\1+/g,'$1').replace(/\s+/g,' ').trim();return p.charAt(0).toUpperCase()+p.slice(1)};
+function mk(text,src){const c={id:'c_'+(++uid),text,category:'other',priority:'important',duration:'',trend:'unknown',source:src||'parsed'};
+ for(const[k,r]of RULES)if(r.test(text)){c.category=k;break}
+ if(SELF.test(text))c.category='emotional';
+ const d=text.match(DUR);if(d)c.duration=d[0];
+ c.trend=/worse|worsening/i.test(text)?'worse':/better|improving/i.test(text)?'better':/\bsame\b|no change|unchanged/i.test(text)?'same':'unknown';
+ c.priority=RED.test(text)||(['symptom','medication'].includes(c.category)&&TOPW.test(text))||(c.category==='change'&&/worse|worsening/i.test(text))?'top':(['admin','other'].includes(c.category)?'later':'important');
+ return c}
+function parse(raw){const parts=raw.replace(/\r/g,'').split(/\n|[•;]|(?<=[.!?])\s+/).flatMap(p=>p.split(/\b(?:and also|also|plus|another thing|oh and)\b,?/i));
+ const seen=new Set(),out=[];
+ for(const p of parts){const t=clean(p),k=t.toLowerCase();if(t.length<4||seen.has(k))continue;seen.add(k);out.push(mk(t))}
+ S.capped=out.length>12;const r=out.slice(0,12);
+ let n=0;r.forEach(c=>{if(c.priority==='top'&&++n>4)c.priority='important'});return r}
+const urgent=()=>RED.test(S.rawText+' '+S.concerns.map(c=>c.text).join(' '));
+const opts=(o,v)=>Object.entries(o).map(([k,l])=>`<option value="${k}"${k===v?' selected':''}>${l}</option>`).join('');
+// ---- Views ----
+function v1(){const b=S.basics;return `<h2>About the visit</h2><p class="mut">Optional. Skip anything you like.</p>
+<label>Visit type<select data-b="visitType"><option value="">Choose…</option>${['Routine check-up','Follow-up','Specialist','New problem','Post-hospital','Other'].map(x=>`<option${x===b.visitType?' selected':''}>${x}</option>`).join('')}</select></label>
+<label>Appointment date<input type="date" data-b="date" value="${esc(b.date)}"></label>
+<fieldset><legend>Who is this visit for?</legend><label class="inl"><input type="radio" name="fw" data-b="forWhom" value="me" ${b.forWhom==='me'?'checked':''}> Me</label><label class="inl"><input type="radio" name="fw" data-b="forWhom" value="other" ${b.forWhom==='other'?'checked':''}> Someone I care for</label></fieldset>
+<label>Name or nickname<input data-b="name" value="${esc(b.name)}" placeholder="e.g., Mom"></label>
+<label>Known conditions (comma separated)<input data-b="conditions" value="${esc(b.conditions.join(', '))}"></label>
+<label>Current medications (one per line)<textarea rows="3" data-b="medications">${esc(b.medications.join('\n'))}</textarea></label>
+<label>Visit length<select data-b="visitMinutes">${[15,20,30].map(m=>`<option value="${m}"${m==b.visitMinutes?' selected':''}>${m} min</option>`).join('')}</select></label>
+<div class="nav"><button class="btn" data-act="skip">Skip</button><button class="btn pri" data-act="next">Next</button></div>`}
+function v2(){return `<h2>Brain dump</h2><label for="dump">What's on your mind? Write it however it comes out.</label>
+<textarea id="dump" rows="8" maxlength="2000" placeholder="e.g., my knee has been aching at night, also worried about the new pill making me dizzy, need a refill, is my sugar ok??">${esc(S.rawText)}</textarea>
+<div class="mut" id="cnt">${S.rawText.length} / 2000</div>
+<p class="mut">Tap to add a starter:</p><div>${Object.keys(CHIPS).map(k=>`<button class="chip" data-act="chip" data-k="${k}">${k}</button>`).join('')}</div>
+<div class="nav"><button class="btn" data-act="back">Back</button><button id="go" class="btn pri" data-act="build" ${S.rawText.trim().length<10?'disabled':''}>Build my brief</button></div>`}
+function card(c,i){return `<article class="card p-${c.priority}" aria-label="Concern ${i+1}"><textarea rows="2" data-i="${i}" data-f="text" aria-label="Concern text">${esc(c.text)}</textarea>
+<div class="row"><label>Category<select data-i="${i}" data-f="category">${opts(CATS,c.category)}</select></label><label>Priority<select data-i="${i}" data-f="priority">${opts(PRI,c.priority)}</select></label></div>
+<div class="row"><label>How long?<input data-i="${i}" data-f="duration" value="${esc(c.duration)}" placeholder="e.g., 2 weeks"></label><label>Getting better or worse?<select data-i="${i}" data-f="trend">${opts(TR,c.trend)}</select></label></div>
+<div class="acts"><button class="sm" data-act="up" data-i="${i}" aria-label="Move up">▲</button><button class="sm" data-act="down" data-i="${i}" aria-label="Move down">▼</button><button class="sm" data-act="del" data-i="${i}">Delete</button></div></article>`}
+function v3(){return `${urgent()?BANNER:''}<h2>Review and adjust</h2><p class="mut">Fix any wording and mark what matters most.</p>${S.capped?'<p class="mut">Showing your first 12 concerns.</p>':''}<div id="bud"></div><div>${S.concerns.map(card).join('')}</div>
+<button class="btn" data-act="add">+ Add another concern</button><div class="nav"><button class="btn" data-act="back">Back</button><button class="btn pri" data-act="brief">See my brief</button></div>`}
+function updBud(){const el=$('#bud');if(!el)return;const n=S.concerns.filter(c=>c.priority==='top').length,m=S.basics.visitMinutes,l=LIM[m]||4;
+ el.className=n>l?'warn':'';el.textContent=`You've marked ${n} top ${n===1?'priority':'priorities'}. In a ${m}-minute visit, most people can cover about ${l-1} to ${l} topics.`}
+const meta=c=>[CATS[c.category],c.duration,c.trend!=='unknown'?TR[c.trend]:''].filter(Boolean).join(' • ');
+const G=p=>S.concerns.filter(c=>c.priority===p),QS=()=>S.concerns.filter(c=>c.category==='question'||c.text.includes('?'));
+const who=()=>S.basics.name||(S.basics.forWhom==='other'?'Someone I care for':'');
+const today=()=>new Date().toLocaleDateString();
+function v4(){const b=S.basics,top=G('top'),imp=G('important'),lat=G('later'),qs=QS();
+ const sec=(t,l,ol)=>l.length?`<h3>${t}</h3><${ol?'ol':'ul'}>${l.map(c=>`<li>${esc(c.text)}<span class="m">${esc(meta(c))}</span></li>`).join('')}</${ol?'ol':'ul'}>`:'';
+ return `<div class="bar noprint"><h2>Your brief</h2><button class="btn pri" data-act="print">Print / Save as PDF</button><button class="btn" data-act="copy">Copy as text</button><button class="btn" data-act="edit">Edit concerns</button><button class="btn" data-act="reset">Start over</button></div>
+<section class="paper" id="brief">${urgent()?BANNER:''}<h1>Visit Brief</h1><div>${esc([who(),b.visitType,b.date].filter(Boolean).join(' • '))}</div><div class="mut">Prepared by the patient on ${today()}</div>
+${b.conditions.length?`<h3>Known conditions</h3><div>${b.conditions.map(x=>`<span class="tag">${esc(x)}</span>`).join('')}</div>`:''}
+${b.medications.length?`<h3>Current medications</h3><ul>${b.medications.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:''}
+${sec('What I most want to cover',top,1)}${sec('Also important',imp)}${sec("If there's time",lat)}
+${qs.length?`<h3>Questions I'd like answered</h3><ul style="list-style:none;padding:0">${qs.map(c=>`<li>☐ ${esc(c.text)}</li>`).join('')}</ul>`:''}
+<h3>Doctor's notes / next steps</h3><div class="line"></div><div class="line"></div><div class="line"></div>
+<p class="mut" style="margin-top:16px">${DISC}</p></section>`}
+function txt(){const b=S.basics,L=(t,l)=>l.length?['',t,...l].join('\n'):'',f=c=>{const m=[c.duration,c.trend!=='unknown'?TR[c.trend]:''].filter(Boolean).join('; ');return c.text+(m?` (${m})`:'')};
+ return [`VISIT BRIEF — ${[who(),b.visitType,b.date].filter(Boolean).join(' — ')}`,b.conditions.length?'Conditions: '+b.conditions.join(', '):'',b.medications.length?'Medications: '+b.medications.join('; '):'',
+ L('MOST WANT TO COVER',G('top').map((c,i)=>`${i+1}. ${f(c)}`)),L('ALSO IMPORTANT',G('important').map(c=>'- '+f(c))),L("IF THERE'S TIME",G('later').map(c=>'- '+f(c))),L('QUESTIONS',QS().map(c=>'[ ] '+c.text)),'','Prepared by the patient. Not medical advice.'].filter((x,i,a)=>x!==''||a[i-1]!=='').join('\n')}
+function modal(){return `<div class="ov"><div class="dlg" role="dialog" aria-modal="true" aria-labelledby="mt"><h1 id="mt">Visit Prep Brief</h1><p>Turn your worries into a one-page brief for your doctor.</p><p class="mut">This is a concept prototype using fake data only. Please don't enter real names, birth dates, or other identifying health details. It isn't medical advice.</p><div class="nav"><button class="btn pri" data-act="start">Start</button><button class="btn" data-act="sample">Load sample scenario</button></div></div></div>`}
+function render(){$('#stp').textContent=`Step ${S.step} of 4`;$('#app').innerHTML=[0,v1,v2,v3,v4][S.step]();$('#modal').innerHTML=S.ack?'':modal();if(S.step===3)updBud();if(!S.ack)$('[data-act=start]').focus()}
+const go=n=>{S.step=n;render();scrollTo(0,0)};
+function toast(m,u){clearTimeout(tt);$('#toast').innerHTML=`<div>${m}${u?'<button data-act="undo">Undo</button>':''}</div>`;tt=setTimeout(()=>$('#toast').innerHTML='',6000)}
+function copy(t){(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).catch(()=>{const a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{document.execCommand('copy')}catch(e){}a.remove()}).finally(()=>toast('Copied to clipboard'))}
+// ---- Events ----
+const onIn=e=>{const t=e.target,d=t.dataset;
+ if(d.b){const b=S.basics,v=t.value;b[d.b]=d.b==='conditions'?v.split(',').map(x=>x.trim()).filter(Boolean):d.b==='medications'?v.split('\n').map(x=>x.trim()).filter(Boolean):d.b==='visitMinutes'?+v:v}
+ else if(t.id==='dump'){S.rawText=t.value;$('#cnt').textContent=`${t.value.length} / 2000`;$('#go').disabled=t.value.trim().length<10}
+ else if(d.f){S.concerns[+d.i][d.f]=t.value;if(d.f==='priority'){t.closest('.card').className='card p-'+t.value;updBud()}}};
+document.addEventListener('input',onIn);document.addEventListener('change',onIn);
+document.addEventListener('click',e=>{const t=e.target.closest('[data-act]');if(!t)return;const a=t.dataset.act,i=+t.dataset.i,C=S.concerns;
+ if(a==='start'){S.ack=true;render()}
+ else if(a==='sample'){S.ack=true;S.basics=JSON.parse(JSON.stringify(SAMPLE.basics));S.rawText=SAMPLE.text;C.length=0;S.concerns=parse(S.rawText);go(3)}
+ else if(a==='skip'||a==='next')go(2);
+ else if(a==='back')go(S.step-1);
+ else if(a==='chip'){const d=$('#dump'),s=CHIPS[t.dataset.k];d.value+=(d.value&&!/\n$/.test(d.value)?'\n':'')+s;S.rawText=d.value;onIn({target:d});d.focus()}
+ else if(a==='build'){S.concerns=parse(S.rawText);if(!S.concerns.length)S.concerns=[mk(clean(S.rawText))];go(3)}
+ else if(a==='add'){C.push(mk('','manual'));C[C.length-1].priority='important';render();document.querySelectorAll('.card textarea[data-f=text]')[C.length-1].focus()}
+ else if(a==='up'&&i>0){[C[i-1],C[i]]=[C[i],C[i-1]];render()}
+ else if(a==='down'&&i<C.length-1){[C[i+1],C[i]]=[C[i],C[i+1]];render()}
+ else if(a==='del'){undo={c:C.splice(i,1)[0],i};render();toast('Concern deleted.',1)}
+ else if(a==='undo'&&undo){C.splice(undo.i,0,undo.c);undo=null;$('#toast').innerHTML='';render()}
+ else if(a==='brief'){S.concerns=C.filter(c=>c.text.trim());go(4)}
+ else if(a==='edit')go(3);
+ else if(a==='print')print();
+ else if(a==='copy')copy(txt());
+ else if(a==='reset'&&confirm('Start over? This clears everything you entered.')){const k=S.ack;S=BLANK();S.ack=k;go(1)}});
+render();
+</script></body></html>
